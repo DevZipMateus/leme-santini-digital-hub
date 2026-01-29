@@ -1,13 +1,29 @@
+import { useEffect } from 'react';
 import Header from '@/components/Header';
 
 const Vitrine = () => {
+  // Esconde o badge do MonteSite na página Vitrine
+  useEffect(() => {
+    const montesiteBadge = document.getElementById('montesite-footer-badge');
+    if (montesiteBadge) {
+      montesiteBadge.style.display = 'none';
+    }
+    
+    return () => {
+      // Restaura o badge ao sair da página
+      if (montesiteBadge) {
+        montesiteBadge.style.display = 'block';
+      }
+    };
+  }, []);
+
   return (
     <div className="h-screen w-full overflow-hidden flex flex-col">
       {/* Header fixo - 80px */}
       <Header />
       
-      {/* Iframe - altura dinâmica: 100vh - 80px (header) - 63px (badge) */}
-      <main className="flex-1 w-full" style={{ height: 'calc(100vh - 80px - 63px)' }}>
+      {/* Iframe - altura dinâmica: 100vh - 80px (header) */}
+      <main className="flex-1 w-full" style={{ height: 'calc(100vh - 80px)' }}>
         <iframe
           src="https://lemesantini.egestor.com.br/vitrine/"
           title="Demonstração de Vitrine"
@@ -15,16 +31,6 @@ const Vitrine = () => {
           style={{ border: 'none' }}
         />
       </main>
-      
-      {/* Badge inferior - 63px */}
-      <div 
-        className="w-full bg-primary flex items-center justify-center"
-        style={{ height: '63px', minHeight: '63px' }}
-      >
-        <p className="text-primary-foreground text-sm sm:text-base font-medium">
-          Leme & Santini Materiais Elétricos — Vitrine de Produtos
-        </p>
-      </div>
     </div>
   );
 };
