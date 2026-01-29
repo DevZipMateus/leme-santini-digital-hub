@@ -18,17 +18,19 @@ const Vitrine = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full overflow-hidden flex flex-col">
-      {/* Header fixo - 80px */}
-      <Header />
+    <div className="h-screen w-full overflow-hidden flex flex-col bg-background">
+      {/* Header fixo com fundo sólido - 80px */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-background shadow-md">
+        <Header />
+      </div>
       
-      {/* Iframe - altura dinâmica: 100vh - 80px (header) */}
-      <main className="flex-1 w-full" style={{ height: 'calc(100vh - 80px)' }}>
+      {/* Iframe - começa após o header (pt-20 = 80px) */}
+      <main className="w-full pt-20" style={{ height: '100vh' }}>
         <iframe
           src="https://lemesantini.egestor.com.br/vitrine/"
           title="Demonstração de Vitrine"
-          className="w-full h-full border-none"
-          style={{ border: 'none' }}
+          className="w-full border-none"
+          style={{ border: 'none', height: 'calc(100vh - 80px)' }}
         />
       </main>
     </div>
