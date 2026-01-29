@@ -1,4 +1,5 @@
 import heroBg from '@/assets/hero-bg.jpg';
+import logo from '@/assets/logo.png';
 
 const Hero = () => {
   return (
@@ -19,9 +20,15 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 text-center py-8 sm:py-12">
         <div className="max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto animate-fade-in-up">
-          <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-primary-foreground mb-4 sm:mb-6 leading-tight">
-            Leme & Santini Materiais Elétricos
-          </h1>
+          {/* H1 hidden visually but available for SEO */}
+          <h1 className="sr-only">Leme & Santini Materiais Elétricos</h1>
+          
+          {/* Logo visible */}
+          <img
+            src={logo}
+            alt="Leme & Santini Materiais Elétricos"
+            className="h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32 w-auto mx-auto mb-4 sm:mb-6 brightness-0 invert"
+          />
 
           <h2 className="font-heading text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium text-primary-foreground/90 mb-3 sm:mb-4">
             Mais que material elétrico. Parceria.
