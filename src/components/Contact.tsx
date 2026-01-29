@@ -7,7 +7,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Endereço',
-      content: 'Av. Higienópolis, 599',
+      content: 'Av. Higienópolis, 599 - Vila Gilda, Santo André - SP',
       link: 'https://maps.app.goo.gl/5Tpk9ZpqsWhyT8Aj8',
     },
     {
@@ -128,7 +128,7 @@ const Contact = () => {
           {/* Map */}
           <div className="bg-card/95 backdrop-blur-sm rounded-xl sm:rounded-2xl overflow-hidden shadow-medium h-[350px] sm:h-[400px] lg:h-auto lg:min-h-[500px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.8761825862707!2d-46.53099702522947!3d-23.5645373609843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e9c9c9c9c9c%3A0x9c9c9c9c9c9c9c9c!2sAv.%20Higien%C3%B3polis%2C%20599!5e0!3m2!1spt-BR!2sbr!4v1706543210000!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.5!2d-46.5285!3d-23.6635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce42e8e9d2b6c5%3A0x8c8d6b3c4e1f2a3b!2sAv.%20Higien%C3%B3polis%2C%20599%20-%20Vila%20Gilda%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009190-360!5e0!3m2!1spt-BR!2sbr!4v1706543210000!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '350px' }}
