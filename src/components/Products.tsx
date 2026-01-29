@@ -4,6 +4,8 @@ import electricalMaterials from '@/assets/electrical-materials-1.jpg';
 import lightingSolutions from '@/assets/lighting-solutions.jpg';
 import electricalPanel from '@/assets/electrical-panel.jpg';
 import electricalInstallation from '@/assets/electrical-installation.jpg';
+import conduitsBoxes from '@/assets/conduits-boxes.jpg';
+import electricalTools from '@/assets/electrical-tools.jpg';
 
 const Products = () => {
   const products = [
@@ -35,11 +37,13 @@ const Products = () => {
       icon: Box,
       title: 'Conduletes e caixas',
       description: 'Conduletes, eletrodutos, perfilados e soluções para infraestrutura.',
+      image: conduitsBoxes,
     },
     {
       icon: Wrench,
       title: 'Miscelâneas',
       description: 'Materiais diversos para manutenção, automação e projetos especiais.',
+      image: electricalTools,
     },
   ];
 
