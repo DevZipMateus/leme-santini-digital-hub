@@ -42,8 +42,8 @@ const Header = () => {
           : 'bg-background'
       }`}
     >
-      <div className="container-custom">
-        <nav className="flex items-center justify-between h-20 px-4 md:px-8">
+      <div className="max-w-7xl mx-auto">
+        <nav className="flex items-center justify-between h-16 sm:h-18 lg:h-20 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <a
             href="#inicio"
@@ -51,17 +51,17 @@ const Header = () => {
               e.preventDefault();
               handleNavClick('#inicio');
             }}
-            className="flex items-center"
+            className="flex items-center flex-shrink-0"
           >
             <img
               src={logo}
               alt="Leme & Santini Materiais Elétricos - Logo"
-              className="h-12 md:h-14 w-auto"
+              className="h-9 sm:h-11 lg:h-14 w-auto"
             />
           </a>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-4 xl:gap-8">
             {navItems.map((item) => (
               <li key={item.href}>
                 <a
@@ -70,7 +70,7 @@ const Header = () => {
                     e.preventDefault();
                     handleNavClick(item.href);
                   }}
-                  className="font-heading font-medium text-foreground/80 hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
+                  className="font-heading font-medium text-sm xl:text-base text-foreground/80 hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {item.label}
                 </a>
@@ -83,7 +83,7 @@ const Header = () => {
             href="https://wa.me/5511966068912"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-lg font-heading font-semibold text-sm hover:bg-primary/90 transition-all duration-300"
+            className="hidden lg:inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 xl:px-6 py-2 xl:py-2.5 rounded-lg font-heading font-semibold text-xs xl:text-sm hover:bg-primary/90 transition-all duration-300"
           >
             Fale conosco
           </a>
@@ -91,20 +91,20 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-foreground"
             aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </nav>
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden transition-all duration-300 overflow-hidden ${
-            isMobileMenuOpen ? 'max-h-96 pb-6' : 'max-h-0'
+          className={`lg:hidden transition-all duration-300 overflow-hidden ${
+            isMobileMenuOpen ? 'max-h-96 pb-4 sm:pb-6' : 'max-h-0'
           }`}
         >
-          <ul className="flex flex-col gap-4 px-4">
+          <ul className="flex flex-col gap-2 sm:gap-3 px-4 sm:px-6">
             {navItems.map((item) => (
               <li key={item.href}>
                 <a
@@ -113,7 +113,7 @@ const Header = () => {
                     e.preventDefault();
                     handleNavClick(item.href);
                   }}
-                  className="block font-heading font-medium text-foreground/80 hover:text-primary transition-colors duration-200 py-2"
+                  className="block font-heading font-medium text-sm sm:text-base text-foreground/80 hover:text-primary transition-colors duration-200 py-2"
                 >
                   {item.label}
                 </a>
@@ -124,7 +124,7 @@ const Header = () => {
                 href="https://wa.me/5511966068912"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-lg font-heading font-semibold text-sm hover:bg-primary/90 transition-all duration-300 mt-2"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 sm:px-6 py-2.5 rounded-lg font-heading font-semibold text-sm hover:bg-primary/90 transition-all duration-300 mt-2"
               >
                 Fale conosco
               </a>
