@@ -1,5 +1,6 @@
 import { Target, Eye, Heart, Zap, Users, Shield } from 'lucide-react';
 import aboutBg from '@/assets/about-bg.jpg';
+import lampadaMao from '@/assets/lampada-mao.jpg';
 
 const About = () => {
   const values = [
@@ -46,21 +47,31 @@ const About = () => {
               Crescemos com responsabilidade, mantendo a proximidade no atendimento e a seriedade no cumprimento de cada compromisso assumido.
             </p>
           </div>
-          <div className="order-1 md:order-2 bg-card rounded-2xl p-8 shadow-medium backdrop-blur-sm">
-            <div className="space-y-6">
-              <div className="border-l-4 border-accent pl-6">
-                <h4 className="font-heading font-bold text-lg text-primary mb-2">Missão</h4>
-                <p className="text-body text-sm">
-                  Oferecer soluções em materiais elétricos com agilidade, excelência e atendimento próximo, apoiando nossos clientes na tomada de decisões eficientes.
-                </p>
-              </div>
-              <div className="border-l-4 border-primary pl-6">
-                <h4 className="font-heading font-bold text-lg text-primary mb-2">Visão</h4>
-                <p className="text-body text-sm">
-                  Ser reconhecida como uma empresa referência em materiais elétricos pela qualidade do atendimento, rapidez nas soluções e compromisso real com o sucesso dos clientes.
-                </p>
-              </div>
+          <div className="order-1 md:order-2">
+            {/* Imagem da lâmpada na mão */}
+            <div className="relative">
+              <img
+                src={lampadaMao}
+                alt="Mão segurando lâmpada iluminada - símbolo de inovação"
+                className="w-full max-w-md mx-auto rounded-2xl shadow-strong"
+              />
             </div>
+          </div>
+        </div>
+
+        {/* Missão e Visão */}
+        <div className="grid md:grid-cols-2 gap-8 mb-20">
+          <div className="bg-card/90 backdrop-blur-sm rounded-2xl p-8 shadow-medium border-l-4 border-accent">
+            <h4 className="font-heading font-bold text-xl text-primary mb-4">Missão</h4>
+            <p className="text-body">
+              Oferecer soluções em materiais elétricos com agilidade, excelência e atendimento próximo, apoiando nossos clientes na tomada de decisões eficientes, na racionalização de custos e no alcance de seus objetivos com segurança e confiança.
+            </p>
+          </div>
+          <div className="bg-card/90 backdrop-blur-sm rounded-2xl p-8 shadow-medium border-l-4 border-primary">
+            <h4 className="font-heading font-bold text-xl text-primary mb-4">Visão</h4>
+            <p className="text-body">
+              Ser reconhecida como uma empresa referência em materiais elétricos pela qualidade do atendimento, rapidez nas soluções e compromisso real com o sucesso dos clientes, construindo relações duradouras baseadas em confiança, competência e resultados concretos.
+            </p>
           </div>
         </div>
 

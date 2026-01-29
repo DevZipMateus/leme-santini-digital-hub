@@ -1,4 +1,5 @@
 import logo from '@/assets/logo.png';
+import iconeTomada from '@/assets/icone-tomada.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,8 +24,18 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="container-custom section-padding">
+    <footer className="bg-primary text-primary-foreground relative overflow-hidden">
+      {/* Decorative plug icon */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+        <img
+          src={iconeTomada}
+          alt=""
+          className="w-64 h-64 object-contain"
+          aria-hidden="true"
+        />
+      </div>
+
+      <div className="container-custom section-padding relative z-10">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Logo and Description */}
           <div>
