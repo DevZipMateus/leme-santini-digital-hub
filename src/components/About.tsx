@@ -1,6 +1,7 @@
 import { Target, Eye, Heart, Zap, Users, Shield } from 'lucide-react';
 import aboutBg from '@/assets/about-bg.jpg';
 import lampadaMao from '@/assets/lampada-mao.jpg';
+import electricalMaterials from '@/assets/electrical-materials-1.jpg';
 
 const About = () => {
   const values = [
@@ -57,6 +58,15 @@ const About = () => {
               />
             </div>
           </div>
+        </div>
+
+        {/* Imagem de destaque do estoque */}
+        <div className="mb-12 sm:mb-16 lg:mb-20 rounded-xl sm:rounded-2xl overflow-hidden shadow-strong">
+          <img
+            src={electricalMaterials}
+            alt="Estoque de materiais elétricos organizados - cabos, fios e componentes"
+            className="w-full h-48 sm:h-64 lg:h-80 object-cover"
+          />
         </div>
 
         {/* Missão e Visão */}

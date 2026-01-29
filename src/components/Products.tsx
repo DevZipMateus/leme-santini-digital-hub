@@ -1,5 +1,9 @@
 import { Cable, Lightbulb, Plug, CircuitBoard, Wrench, Box } from 'lucide-react';
 import productsBg from '@/assets/products-bg.jpg';
+import electricalMaterials from '@/assets/electrical-materials-1.jpg';
+import lightingSolutions from '@/assets/lighting-solutions.jpg';
+import electricalPanel from '@/assets/electrical-panel.jpg';
+import electricalInstallation from '@/assets/electrical-installation.jpg';
 
 const Products = () => {
   const products = [
@@ -7,21 +11,25 @@ const Products = () => {
       icon: Cable,
       title: 'Fios e cabos',
       description: 'Ampla variedade de fios e cabos elétricos para instalações residenciais, comerciais e industriais.',
+      image: electricalMaterials,
     },
     {
       icon: Lightbulb,
       title: 'Iluminação',
       description: 'Lâmpadas LED, luminárias e soluções completas em iluminação eficiente.',
+      image: lightingSolutions,
     },
     {
       icon: CircuitBoard,
       title: 'Proteção e controle',
       description: 'Disjuntores, contatores, botoeiras e equipamentos de proteção elétrica.',
+      image: electricalPanel,
     },
     {
       icon: Plug,
       title: 'Tomadas e interruptores',
       description: 'Linhas completas de tomadas e interruptores de marcas renomadas.',
+      image: electricalInstallation,
     },
     {
       icon: Box,
@@ -61,17 +69,31 @@ const Products = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className="group bg-card/95 backdrop-blur-sm border border-border rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 card-hover"
+              className="group bg-card/95 backdrop-blur-sm border border-border rounded-xl sm:rounded-2xl overflow-hidden card-hover"
             >
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 gradient-accent rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
-                <product.icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-accent-foreground" />
+              {/* Product Image */}
+              {product.image && (
+                <div className="relative h-32 sm:h-36 lg:h-40 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
+                </div>
+              )}
+              
+              <div className="p-5 sm:p-6 lg:p-8">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 gradient-accent rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <product.icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-accent-foreground" />
+                </div>
+                <h3 className="font-heading font-bold text-base sm:text-lg lg:text-xl text-foreground mb-2 sm:mb-3">
+                  {product.title}
+                </h3>
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  {product.description}
+                </p>
               </div>
-              <h3 className="font-heading font-bold text-base sm:text-lg lg:text-xl text-foreground mb-2 sm:mb-3">
-                {product.title}
-              </h3>
-              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                {product.description}
-              </p>
             </div>
           ))}
         </div>
