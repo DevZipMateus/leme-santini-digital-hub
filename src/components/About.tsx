@@ -2,6 +2,7 @@ import { Target, Eye, Heart, Zap, Users, Shield } from 'lucide-react';
 import aboutBg from '@/assets/about-bg.jpg';
 import lampadaMao from '@/assets/lampada-mao.jpg';
 import electricalMaterials from '@/assets/electrical-materials-1.jpg';
+import electricianPanel from '@/assets/electrician-panel.jpg';
 
 const About = () => {
   const values = [
@@ -60,13 +61,22 @@ const About = () => {
           </div>
         </div>
 
-        {/* Imagem de destaque do estoque */}
-        <div className="mb-12 sm:mb-16 lg:mb-20 rounded-xl sm:rounded-2xl overflow-hidden shadow-strong">
-          <img
-            src={electricalMaterials}
-            alt="Estoque de materiais elétricos organizados - cabos, fios e componentes"
-            className="w-full h-48 sm:h-64 lg:h-80 object-cover"
-          />
+        {/* Imagens de destaque */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-12 sm:mb-16 lg:mb-20">
+          <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-strong">
+            <img
+              src={electricalMaterials}
+              alt="Estoque de materiais elétricos organizados - cabos, fios e componentes"
+              className="w-full h-48 sm:h-64 lg:h-72 object-cover"
+            />
+          </div>
+          <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-strong">
+            <img
+              src={electricianPanel}
+              alt="Eletricista profissional trabalhando em painel elétrico"
+              className="w-full h-48 sm:h-64 lg:h-72 object-cover"
+            />
+          </div>
         </div>
 
         {/* Missão e Visão */}
