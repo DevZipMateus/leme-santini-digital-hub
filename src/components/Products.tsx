@@ -1,4 +1,5 @@
-import { Cable, Lightbulb, Plug, CircuitBoard, Wrench, Box } from 'lucide-react';
+import { Cable, Lightbulb, Plug, CircuitBoard, Wrench, Box, ShoppingBag, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import productsBg from '@/assets/products-bg.jpg';
 import electricalMaterials from '@/assets/electrical-materials-1.jpg';
 import lightingSolutions from '@/assets/lighting-solutions.jpg';
@@ -100,6 +101,32 @@ const Products = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Vitrine CTA Banner */}
+        <div className="mt-10 sm:mt-12 lg:mt-16 bg-gradient-to-r from-primary to-primary/80 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-strong">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div className="text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
+                <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center">
+                  <ShoppingBag className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h3 className="font-heading font-bold text-xl sm:text-2xl lg:text-3xl text-primary-foreground">
+                  Vitrine de Produtos
+                </h3>
+              </div>
+              <p className="text-primary-foreground/90 text-sm sm:text-base lg:text-lg max-w-xl">
+                Navegue por nossa vitrine completa com todos os produtos disponíveis, preços atualizados e condições especiais.
+              </p>
+            </div>
+            <Link
+              to="/vitrine"
+              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-heading font-semibold text-sm sm:text-base lg:text-lg hover:bg-accent/90 transition-all duration-300 shadow-medium group whitespace-nowrap"
+            >
+              Acessar vitrine
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
 
         {/* CTA */}
