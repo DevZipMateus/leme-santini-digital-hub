@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ShoppingBag } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,24 +48,34 @@ const Header = () => {
       <div className="max-w-7xl mx-auto">
         <nav className="flex items-center justify-between h-16 sm:h-18 lg:h-20 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <a
-            href="#inicio"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick('#inicio');
-            }}
-            className="flex items-center flex-shrink-0"
-          >
-            <img
-              src={logo}
-              alt="Leme & Santini Materiais Elétricos - Logo"
-              className="h-9 sm:h-11 lg:h-14 w-auto"
-            />
-          </a>
+          {isHomePage ? (
+            <a
+              href="#inicio"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('#inicio');
+              }}
+              className="flex items-center flex-shrink-0"
+            >
+              <img
+                src={logo}
+                alt="Leme & Santini Materiais Elétricos - Logo"
+                className="h-9 sm:h-11 lg:h-14 w-auto"
+              />
+            </a>
+          ) : (
+            <Link to="/" className="flex items-center flex-shrink-0">
+              <img
+                src={logo}
+                alt="Leme & Santini Materiais Elétricos - Logo"
+                className="h-9 sm:h-11 lg:h-14 w-auto"
+              />
+            </Link>
+          )}
 
           {/* Desktop Navigation */}
           <ul className="hidden lg:flex items-center gap-4 xl:gap-8">
-            {navItems.map((item) => (
+            {isHomePage && navItems.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
@@ -76,6 +89,25 @@ const Header = () => {
                 </a>
               </li>
             ))}
+            {!isHomePage && (
+              <li>
+                <Link
+                  to="/"
+                  className="font-heading font-medium text-sm xl:text-base text-foreground/80 hover:text-primary transition-colors duration-200"
+                >
+                  Voltar ao site
+                </Link>
+              </li>
+            )}
+            <li>
+              <Link
+                to="/vitrine"
+                className="inline-flex items-center gap-2 font-heading font-medium text-sm xl:text-base text-accent hover:text-accent/80 transition-colors duration-200"
+              >
+                <ShoppingBag size={18} />
+                Vitrine
+              </Link>
+            </li>
           </ul>
 
           {/* CTA Button Desktop */}
@@ -105,7 +137,7 @@ const Header = () => {
           }`}
         >
           <ul className="flex flex-col gap-2 sm:gap-3 px-4 sm:px-6">
-            {navItems.map((item) => (
+            {isHomePage && navItems.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
@@ -119,6 +151,27 @@ const Header = () => {
                 </a>
               </li>
             ))}
+            {!isHomePage && (
+              <li>
+                <Link
+                  to="/"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block font-heading font-medium text-sm sm:text-base text-foreground/80 hover:text-primary transition-colors duration-200 py-2"
+                >
+                  Voltar ao site
+                </Link>
+              </li>
+            )}
+            <li>
+              <Link
+                to="/vitrine"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-2 font-heading font-medium text-sm sm:text-base text-accent hover:text-accent/80 transition-colors duration-200 py-2"
+              >
+                <ShoppingBag size={18} />
+                Vitrine
+              </Link>
+            </li>
             <li>
               <a
                 href="https://wa.me/5511966068912"

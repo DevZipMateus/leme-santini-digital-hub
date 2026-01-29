@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { ShoppingBag } from 'lucide-react';
 import heroBg from '@/assets/hero-bg.jpg';
 import logo from '@/assets/logo.png';
 
@@ -47,16 +49,13 @@ const Hero = () => {
             >
               Solicitar orçamento
             </a>
-            <a
-              href="#produtos"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector('#produtos')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+            <Link
+              to="/vitrine"
               className="inline-flex items-center justify-center gap-2 btn-outline-light px-5 sm:px-6 lg:px-8 py-3 sm:py-3.5 lg:py-4 rounded-lg font-heading font-semibold text-sm sm:text-base lg:text-lg"
             >
-              Nossos produtos
-            </a>
+              <ShoppingBag size={20} />
+              Ver vitrine
+            </Link>
           </div>
         </div>
       </div>
