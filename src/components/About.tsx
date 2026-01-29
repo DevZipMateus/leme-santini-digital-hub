@@ -1,6 +1,5 @@
 import { Target, Eye, Heart, Zap, Users, Shield } from 'lucide-react';
 import aboutBg from '@/assets/about-bg.jpg';
-import lampadaMao from '@/assets/lampada-mao.jpg';
 import lightbulbGlow from '@/assets/lightbulb-glow.jpg';
 import electricianPanel from '@/assets/electrician-panel.jpg';
 
@@ -50,11 +49,11 @@ const About = () => {
             </p>
           </div>
           <div className="order-1 lg:order-2">
-            {/* Imagem da lâmpada na mão */}
+            {/* Imagem do eletricista trabalhando */}
             <div className="relative">
               <img
-                src={lampadaMao}
-                alt="Mão segurando lâmpada iluminada - símbolo de inovação"
+                src={electricianPanel}
+                alt="Eletricista profissional trabalhando em painel elétrico"
                 className="w-full max-w-[280px] sm:max-w-sm md:max-w-md mx-auto rounded-2xl shadow-strong"
               />
             </div>
