@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { ShoppingBag } from 'lucide-react';
-import heroBg from '@/assets/hero-bg.jpg';
 import logo from '@/assets/logo.png';
 
 const Hero = () => {
@@ -9,13 +8,17 @@ const Hero = () => {
       id="inicio"
       className="relative min-h-[100svh] flex items-center justify-center pt-16 sm:pt-20"
     >
-      {/* Background Image with Overlay */}
+      {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroBg}
-          alt="Loja de materiais elétricos Leme & Santini"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="/822434330811756.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 gradient-hero" />
       </div>
 
