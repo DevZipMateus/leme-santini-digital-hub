@@ -44,7 +44,7 @@ const Products = () => {
           alt="Materiais elétricos organizados"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/97 via-background/95 to-secondary/90" />
+        <div className="absolute inset-0 bg-white/90" />
       </div>
 
       <div className="container-custom relative z-10">
