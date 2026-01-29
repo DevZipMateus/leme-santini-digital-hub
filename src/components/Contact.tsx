@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from 'lucide-react';
 import contactBg from '@/assets/contact-bg.jpg';
+import capaLeme from '@/assets/capa-leme.png';
 
 const Contact = () => {
   const contactInfo = [
@@ -113,15 +114,24 @@ const Contact = () => {
                 ))}
               </div>
             </div>
+
+            {/* Banner da empresa */}
+            <div className="rounded-2xl overflow-hidden shadow-medium">
+              <img
+                src={capaLeme}
+                alt="Leme & Santini - Mais que material elétrico, parceria"
+                className="w-full h-auto object-cover"
+              />
+            </div>
           </div>
 
           {/* Map */}
-          <div className="bg-card/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-medium h-[400px] lg:h-auto">
+          <div className="bg-card/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-medium h-[500px] lg:h-auto">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.8761825862707!2d-46.53099702522947!3d-23.5645373609843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e9c9c9c9c9c%3A0x9c9c9c9c9c9c9c9c!2sAv.%20Higien%C3%B3polis%2C%20599!5e0!3m2!1spt-BR!2sbr!4v1706543210000!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
-              style={{ border: 0, minHeight: '400px' }}
+              style={{ border: 0, minHeight: '500px' }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
