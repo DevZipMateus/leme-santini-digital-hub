@@ -1,4 +1,5 @@
 import { Cable, Lightbulb, Plug, CircuitBoard, Wrench, Box } from 'lucide-react';
+import productsBg from '@/assets/products-bg.jpg';
 
 const Products = () => {
   const products = [
@@ -35,8 +36,18 @@ const Products = () => {
   ];
 
   return (
-    <section id="produtos" className="section-padding bg-background">
-      <div className="container-custom">
+    <section id="produtos" className="relative section-padding">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={productsBg}
+          alt="Materiais elétricos organizados"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/97 via-background/95 to-secondary/90" />
+      </div>
+
+      <div className="container-custom relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-section">Nossos produtos</h2>
@@ -50,7 +61,7 @@ const Products = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className="group bg-card border border-border rounded-2xl p-8 card-hover"
+              className="group bg-card/95 backdrop-blur-sm border border-border rounded-2xl p-8 card-hover"
             >
               <div className="w-16 h-16 gradient-accent rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <product.icon className="w-8 h-8 text-accent-foreground" />

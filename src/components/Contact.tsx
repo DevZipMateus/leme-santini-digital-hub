@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from 'lucide-react';
+import contactBg from '@/assets/contact-bg.jpg';
 
 const Contact = () => {
   const contactInfo = [
@@ -41,8 +42,18 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contato" className="section-padding bg-secondary">
-      <div className="container-custom">
+    <section id="contato" className="relative section-padding">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={contactBg}
+          alt="Balcão de atendimento ao cliente"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/95 via-secondary/92 to-background/95" />
+      </div>
+
+      <div className="container-custom relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-section">Entre em contato</h2>
@@ -57,7 +68,7 @@ const Contact = () => {
             {contactInfo.map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 bg-card rounded-xl p-6 shadow-soft"
+                className="flex items-start gap-4 bg-card/95 backdrop-blur-sm rounded-xl p-6 shadow-soft"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-6 h-6 text-primary" />
@@ -83,7 +94,7 @@ const Contact = () => {
             ))}
 
             {/* Social Links */}
-            <div className="bg-card rounded-xl p-6 shadow-soft">
+            <div className="bg-card/95 backdrop-blur-sm rounded-xl p-6 shadow-soft">
               <h3 className="font-heading font-semibold text-foreground mb-4">
                 Redes sociais
               </h3>
@@ -105,7 +116,7 @@ const Contact = () => {
           </div>
 
           {/* Map */}
-          <div className="bg-card rounded-2xl overflow-hidden shadow-soft h-[400px] lg:h-auto">
+          <div className="bg-card/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-medium h-[400px] lg:h-auto">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.8761825862707!2d-46.53099702522947!3d-23.5645373609843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e9c9c9c9c9c%3A0x9c9c9c9c9c9c9c9c!2sAv.%20Higien%C3%B3polis%2C%20599!5e0!3m2!1spt-BR!2sbr!4v1706543210000!5m2!1spt-BR!2sbr"
               width="100%"
