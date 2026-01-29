@@ -1,4 +1,5 @@
 import { Target, Eye, Heart, Zap, Users, Shield } from 'lucide-react';
+import aboutBg from '@/assets/about-bg.jpg';
 
 const About = () => {
   const values = [
@@ -11,8 +12,18 @@ const About = () => {
   ];
 
   return (
-    <section id="sobre" className="section-padding bg-secondary">
-      <div className="container-custom">
+    <section id="sobre" className="relative section-padding">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={aboutBg}
+          alt="Equipe de parceiros em reunião de negócios"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/95 via-secondary/90 to-background/95" />
+      </div>
+
+      <div className="container-custom relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="heading-section">Sobre nós</h2>
@@ -35,7 +46,7 @@ const About = () => {
               Crescemos com responsabilidade, mantendo a proximidade no atendimento e a seriedade no cumprimento de cada compromisso assumido.
             </p>
           </div>
-          <div className="order-1 md:order-2 bg-card rounded-2xl p-8 shadow-soft">
+          <div className="order-1 md:order-2 bg-card rounded-2xl p-8 shadow-medium backdrop-blur-sm">
             <div className="space-y-6">
               <div className="border-l-4 border-accent pl-6">
                 <h4 className="font-heading font-bold text-lg text-primary mb-2">Missão</h4>
@@ -60,7 +71,7 @@ const About = () => {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-card rounded-xl p-6 card-hover shadow-soft"
+                className="bg-card/90 backdrop-blur-sm rounded-xl p-6 card-hover shadow-soft"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <value.icon className="w-6 h-6 text-primary" />
