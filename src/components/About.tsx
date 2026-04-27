@@ -1,6 +1,6 @@
 import { Target, Eye, Heart, Zap, Users, Shield } from 'lucide-react';
 import aboutBg from '@/assets/about-bg.jpg';
-import lightbulbGlow from '@/assets/lightbulb-glow.jpg';
+
 
 
 const About = () => {
