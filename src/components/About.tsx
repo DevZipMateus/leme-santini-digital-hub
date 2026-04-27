@@ -1,7 +1,7 @@
 import { Target, Eye, Heart, Zap, Users, Shield } from 'lucide-react';
 import aboutBg from '@/assets/about-bg.jpg';
 import lightbulbGlow from '@/assets/lightbulb-glow.jpg';
-import electricianPanel from '@/assets/electrician-panel.jpg';
+
 
 const About = () => {
   const values = [
