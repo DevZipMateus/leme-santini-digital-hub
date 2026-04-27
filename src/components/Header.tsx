@@ -115,7 +115,7 @@ const Header = () => {
             href="https://wa.me/5511966068912"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 xl:px-6 py-2 xl:py-2.5 rounded-lg font-heading font-semibold text-xs xl:text-sm hover:bg-primary/90 transition-all duration-300"
+            className="hidden lg:inline-flex items-center gap-2 gradient-button text-primary-foreground px-4 xl:px-6 py-2 xl:py-2.5 rounded-lg font-heading font-semibold text-xs xl:text-sm hover:opacity-90 transition-all duration-300 shadow-soft"
           >
             Fale conosco
           </a>
