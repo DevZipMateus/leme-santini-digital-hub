@@ -31,8 +31,8 @@
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    /* Purple Accent (from logo) */
-    --accent: 262 72% 40%;
+    /* Accent: lighter blue (replaces former purple accent) */
+    --accent: 210 90% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
