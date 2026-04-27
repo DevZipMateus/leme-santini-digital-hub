@@ -144,11 +144,17 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300;
+    background: var(--gradient-button);
+    @apply text-primary-foreground hover:opacity-90 transition-all duration-300;
   }
 
   .btn-accent {
-    @apply bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-300;
+    background: var(--gradient-button);
+    @apply text-primary-foreground hover:opacity-90 transition-all duration-300;
+  }
+
+  .gradient-button {
+    background: var(--gradient-button);
   }
 
   .btn-outline-light {
