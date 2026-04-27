@@ -1,6 +1,6 @@
 import { Target, Eye, Heart, Zap, Users, Shield } from 'lucide-react';
 import aboutBg from '@/assets/about-bg.jpg';
-import lightbulbGlow from '@/assets/lightbulb-glow.jpg';
+
 
 
 const About = () => {
@@ -47,15 +47,6 @@ const About = () => {
               Crescemos com responsabilidade, mantendo a proximidade no atendimento e a seriedade no cumprimento de cada compromisso assumido.
             </p>
           </div>
-        </div>
-
-        {/* Imagem de destaque */}
-        <div className="mb-12 sm:mb-16 lg:mb-20 rounded-xl sm:rounded-2xl overflow-hidden shadow-strong">
-          <img
-            src={lightbulbGlow}
-            alt="Lâmpada incandescente com filamentos brilhando - símbolo de energia e inovação"
-            className="w-full h-48 sm:h-64 lg:h-80 object-cover"
-          />
         </div>
 
         {/* Missão e Visão */}
