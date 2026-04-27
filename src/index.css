@@ -162,6 +162,10 @@
   .gradient-accent {
     background: var(--gradient-accent);
   }
+
+  .gradient-navy {
+    background: var(--gradient-navy);
+  }
 }
 
 @layer utilities {
