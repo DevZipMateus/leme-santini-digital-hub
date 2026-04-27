@@ -121,7 +121,7 @@ const Products = () => {
             </div>
             <Link
               to="/vitrine"
-              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-heading font-semibold text-sm sm:text-base lg:text-lg hover:bg-accent/90 transition-all duration-300 shadow-medium group whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 gradient-button text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-heading font-semibold text-sm sm:text-base lg:text-lg hover:opacity-90 transition-all duration-300 shadow-medium group whitespace-nowrap"
             >
               Acessar vitrine
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
