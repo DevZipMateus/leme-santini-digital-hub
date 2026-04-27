@@ -46,7 +46,7 @@ const Hero = () => {
               href="https://wa.me/5511966068912"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-5 sm:px-6 lg:px-8 py-3 sm:py-3.5 lg:py-4 rounded-lg font-heading font-semibold text-sm sm:text-base lg:text-lg hover:bg-accent/90 transition-all duration-300 shadow-medium"
+              className="inline-flex items-center justify-center gap-2 gradient-button text-primary-foreground px-5 sm:px-6 lg:px-8 py-3 sm:py-3.5 lg:py-4 rounded-lg font-heading font-semibold text-sm sm:text-base lg:text-lg hover:opacity-90 transition-all duration-300 shadow-medium"
             >
               Solicitar orçamento
             </a>
