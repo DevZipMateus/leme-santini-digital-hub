@@ -177,7 +177,7 @@ const Header = () => {
                 href="https://wa.me/5511966068912"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 sm:px-6 py-2.5 rounded-lg font-heading font-semibold text-sm hover:bg-primary/90 transition-all duration-300 mt-2"
+                className="inline-flex items-center gap-2 gradient-button text-primary-foreground px-5 sm:px-6 py-2.5 rounded-lg font-heading font-semibold text-sm hover:opacity-90 transition-all duration-300 shadow-soft mt-2"
               >
                 Fale conosco
               </a>
