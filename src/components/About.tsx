@@ -28,8 +28,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-10 sm:mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 sm:mb-4">Sobre nós</h2>
-          <p className="text-muted-foreground leading-relaxed max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto text-sm sm:text-base">
+          <p className="text-foreground leading-relaxed max-w-xs sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-medium">
             Conheça a história, a missão e os valores que guiam a Leme & Santini Materiais Elétricos.
           </p>
         </div>
