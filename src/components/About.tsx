@@ -34,8 +34,8 @@ const About = () => {
         </div>
 
         {/* História */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 sm:mb-16 lg:mb-20">
-          <div className="order-2 lg:order-1 text-center">
+        <div className="mb-12 sm:mb-16 lg:mb-20 max-w-3xl mx-auto">
+          <div className="text-center">
             <h3 className="text-xl sm:text-2xl font-semibold text-primary mb-3">Nossa história</h3>
             <p className="text-muted-foreground leading-relaxed mb-3 sm:mb-4 text-sm sm:text-base">
               A Leme & Santini Materiais Elétricos nasceu com o propósito de oferecer mais do que produtos: entregar soluções eficientes, atendimento ágil e parceria real com seus clientes.
@@ -46,16 +46,6 @@ const About = () => {
             <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
               Crescemos com responsabilidade, mantendo a proximidade no atendimento e a seriedade no cumprimento de cada compromisso assumido.
             </p>
-          </div>
-          <div className="order-1 lg:order-2">
-            {/* Imagem do eletricista trabalhando */}
-            <div className="relative">
-              <img
-                src={electricianPanel}
-                alt="Eletricista profissional trabalhando em painel elétrico"
-                className="w-full max-w-[280px] sm:max-w-sm md:max-w-md mx-auto rounded-2xl shadow-strong"
-              />
-            </div>
           </div>
         </div>
 
