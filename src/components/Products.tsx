@@ -89,8 +89,8 @@ const Products = () => {
               )}
               
               <div className="p-5 sm:p-6 lg:p-8">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 gradient-accent rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <product.icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-accent-foreground" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 gradient-navy rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-medium">
+                  <product.icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-primary-foreground" />
                 </div>
                 <h3 className="font-heading font-bold text-base sm:text-lg lg:text-xl text-foreground mb-2 sm:mb-3">
                   {product.title}
