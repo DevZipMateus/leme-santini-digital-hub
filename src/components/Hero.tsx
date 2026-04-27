@@ -50,13 +50,6 @@ const Hero = () => {
             >
               Solicitar orçamento
             </a>
-            <Link
-              to="/vitrine"
-              className="inline-flex items-center justify-center gap-2 btn-outline-light px-5 sm:px-6 lg:px-8 py-3 sm:py-3.5 lg:py-4 rounded-lg font-heading font-semibold text-sm sm:text-base lg:text-lg"
-            >
-              <ShoppingBag size={20} />
-              Ver vitrine
-            </Link>
           </div>
         </div>
       </div>
