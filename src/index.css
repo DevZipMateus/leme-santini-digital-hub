@@ -20,13 +20,13 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    /* Navy Blue Primary */
-    --primary: 240 60% 25%;
+    /* Navy Blue Primary (from logo) */
+    --primary: 225 65% 25%;
     --primary-foreground: 0 0% 100%;
 
     /* Light Blue Secondary */
     --secondary: 210 40% 96%;
-    --secondary-foreground: 240 60% 25%;
+    --secondary-foreground: 225 65% 25%;
 
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
