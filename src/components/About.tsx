@@ -49,15 +49,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Imagem de destaque */}
-        <div className="mb-12 sm:mb-16 lg:mb-20 rounded-xl sm:rounded-2xl overflow-hidden shadow-strong">
-          <img
-            src={lightbulbGlow}
-            alt="Lâmpada incandescente com filamentos brilhando - símbolo de energia e inovação"
-            className="w-full h-48 sm:h-64 lg:h-80 object-cover"
-          />
-        </div>
-
         {/* Missão e Visão */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20">
           <div className="bg-card/90 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 shadow-medium border-l-4 border-accent">
