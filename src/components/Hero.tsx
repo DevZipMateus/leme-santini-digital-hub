@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-import { ShoppingBag } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 const Hero = () => {
