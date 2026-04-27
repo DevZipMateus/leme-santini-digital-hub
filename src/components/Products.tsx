@@ -121,7 +121,7 @@ const Products = () => {
             </div>
             <Link
               to="/vitrine"
-              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-heading font-semibold text-sm sm:text-base lg:text-lg hover:bg-accent/90 transition-all duration-300 shadow-medium group whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 gradient-button text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-heading font-semibold text-sm sm:text-base lg:text-lg hover:opacity-90 transition-all duration-300 shadow-medium group whitespace-nowrap"
             >
               Acessar vitrine
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -138,7 +138,7 @@ const Products = () => {
             href="https://wa.me/5511966068912"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-heading font-semibold text-sm sm:text-base lg:text-lg hover:bg-primary/90 transition-all duration-300"
+            className="inline-flex items-center justify-center gap-2 gradient-button text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-heading font-semibold text-sm sm:text-base lg:text-lg hover:opacity-90 transition-all duration-300 shadow-medium"
           >
             Solicitar orçamento
           </a>
