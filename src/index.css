@@ -31,8 +31,8 @@
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    /* Accent: lighter blue (replaces former purple accent) */
-    --accent: 210 90% 50%;
+    /* Accent: same navy as primary */
+    --accent: 225 65% 25%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
