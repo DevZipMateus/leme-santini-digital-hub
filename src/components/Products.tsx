@@ -108,8 +108,8 @@ const Products = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div className="text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
-                <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center">
-                  <ShoppingBag className="w-6 h-6 text-accent-foreground" />
+                <div className="w-12 h-12 gradient-navy rounded-xl flex items-center justify-center shadow-medium">
+                  <ShoppingBag className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <h3 className="font-heading font-bold text-xl sm:text-2xl lg:text-3xl text-primary-foreground">
                   Vitrine de Produtos
