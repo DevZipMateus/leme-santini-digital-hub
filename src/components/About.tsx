@@ -35,7 +35,7 @@ const About = () => {
 
         {/* História */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 sm:mb-16 lg:mb-20">
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 text-center">
             <h3 className="text-xl sm:text-2xl font-semibold text-primary mb-3">Nossa história</h3>
             <p className="text-muted-foreground leading-relaxed mb-3 sm:mb-4 text-sm sm:text-base">
               A Leme & Santini Materiais Elétricos nasceu com o propósito de oferecer mais do que produtos: entregar soluções eficientes, atendimento ágil e parceria real com seus clientes.
